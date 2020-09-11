@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'ormApp/base.html' %}
+    {% block body_block %}
+      <h1> This is Employee update Page</h1>
+      <form method="post">
+          {% csrf_token %}
+          Employee name: <input type="text" name="name" value="{{l.name}}">
+          <p></p>
+          Employee age:<input type="text" name="age" value="{{l.age}}">
+          <p></p>
+          Employee salary:<input type="text" name="salary" value="{{l.salary}}">
+          <p></p>
+          Employee Address:<input type="text" name="address" value="{{l.address}}"><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<br>
+          <input type="submit" class="btn btn-warning" value="Update Record">
+          <p></p>
+      </form>
+    {% endblock %}

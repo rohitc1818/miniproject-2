@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+{% block body_block %}
+    <h2> This is the Employee Insert Information Form.</h2><hr>
+        <form method="post">
+       {{form.as_p}}
+
+       {% csrf_token %}&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+       <input type="submit" class="btn btn-primary btn-lg" value="Insert">
+        </form>
+{% endblock %}

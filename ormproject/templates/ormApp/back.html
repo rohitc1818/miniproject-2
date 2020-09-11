@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% extends 'ormApp/base.html' %}
+    {% block body_block %}
+        <h3> This is the Employee Data </h3>
+         <table border="2">
+             <thead>
+                 <th>Name</th>
+                 <th>Age</th>
+                 <th>Salary</th>
+                 <th>Address</th>
+                 <th> Action </th>
+             </thead>
+             {% for l in list %}
+                <tr>
+                    <td>{{l.name}}</td>
+                    <td>{{l.age}}</td>
+                    <td>{{l.salary}}</td>
+                    <td>{{l.address}}</td>
+                    <td>
+                        <a href="/update/{{l.id}}">Update</a>&nbsp&nbsp
+                        <a href="/delete/{{l.id}}">Delete</a>
+                    </td>
+                </tr>
+             {% endfor %}
+         </table><br>
+      <a href="/home" class="btn btn-success btn-lg">Do you want to insert record</a>
+    {% endblock %}
